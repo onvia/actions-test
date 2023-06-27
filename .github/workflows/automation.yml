@@ -14,8 +14,8 @@ jobs:
       with:
         type: 'zip'
         filename: 'tnt.zip'
-        directory: 'assets/a-framework'
-        path: '.'
+        directory: 'assets'
+        path: 'a-framework'
     - name: Release  
       uses: softprops/action-gh-release@v1
       with:
