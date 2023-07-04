@@ -19,7 +19,7 @@ jobs:
       uses: montudor/action-zip@v1
 
     - name: Zip output
-      run: zip -r tnt.zip a-framework a-framework.meta tnt-version.json
+      run: zip -r tnt.zip a-framework a-framework.meta
       working-directory: ./assets  
 
     - name: Release  
