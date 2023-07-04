@@ -9,12 +9,17 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-    - uses: montudor/action-zip@v1
-      with:
-        args: zip -r tnt.zip assets
-    # - name: Zip output
-    #   run: zip -qq -r tnt.zip a-framework
-    #   working-directory: assets  
+    # - uses: montudor/action-zip@v1
+    #   with:
+    #     args: zip -r tnt.zip assets
+
+    - name: Install Zip
+      uses: montudor/action-zip@v1
+
+    - name: Zip output
+      run: zip -r tnt.zip a-framework
+      working-directory: ./assets  
+
     - name: Release  
       uses: softprops/action-gh-release@v1
       with:
