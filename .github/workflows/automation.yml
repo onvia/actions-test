@@ -14,7 +14,7 @@ jobs:
         args: zip -qq -r tnt.zip assets
     # - name: Zip output
     #   run: zip -qq -r tnt.zip a-framework
-    #   working-directory: assets
+    #   working-directory: assets  
     - name: Release  
       uses: softprops/action-gh-release@v1
       with:
