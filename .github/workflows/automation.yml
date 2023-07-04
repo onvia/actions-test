@@ -13,7 +13,7 @@ jobs:
     - uses: "finnp/create-file-action@master"
       env:
         FILE_NAME: "./assets/a-framework/tnt-version.json"
-        FILE_DATA: "{ \"version\": \"${{ github.ref_name }} \" }"
+        FILE_DATA: "{ \"version\": \"${{ github.ref_name }}\" }"
 
     - name: Install Zip
       uses: montudor/action-zip@v1
