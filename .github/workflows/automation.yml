@@ -17,11 +17,11 @@ jobs:
       uses: montudor/action-zip@v1
 
     - name: Zip output
-      run: zip -r tnt.zip a-framework
+      run: zip -r tnt.zip a-framework a-framework.meta
       working-directory: ./assets  
 
     - name: Release  
       uses: softprops/action-gh-release@v1
       with:
-        files: tnt.zip
+        files: ./assets/tnt.zip
         token: ${{ secrets.TNT_TOKEN }}
